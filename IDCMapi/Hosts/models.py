@@ -46,6 +46,8 @@ class Host(models.Model):
         blank=True, null=True, db_column='disk_number',verbose_name='磁盘数量')
     raid_type = models.CharField(
         max_length=50, blank=True, db_column='raid_type',verbose_name='磁盘RAID')
+    ssd_capacity = models.PositiveSmallIntegerField(
+        blank=True, null=True, db_column="ssd_capacity",verbose_name='SSD容量')
 
     def __str__(self):
         return self.host_name
