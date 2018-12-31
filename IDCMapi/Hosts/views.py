@@ -5,5 +5,5 @@ from .serializers import HostSerializer
 
 # Create your views here.
 class HostViewset(viewsets.ModelViewSet):
-    queryset = Host.objects.all()[:10]
+    queryset = Host.objects.all()
     serializer_class = HostSerializer
